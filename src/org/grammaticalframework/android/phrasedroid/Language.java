@@ -3,11 +3,20 @@ package org.grammaticalframework.android.phrasedroid;
 import java.util.Locale;
 
 public enum Language {
-    GERMAN  ("PhrasebookGer", Locale.GERMAN),
-    FRENCH  ("PhrasebookFre", Locale.FRENCH),
-    ENGLISH ("PhrasebookEng", Locale.ENGLISH),
-    SPANISH ("PhrasebookSpa", new Locale("es")),
-    ITALIAN ("PhrasebookIta", Locale.ITALIAN);
+    BULGARIAN ("PhrasebookBul", new Locale("bg")),
+    CATALAN   ("PhrasebookCat", new Locale("ca")),
+    DANISH    ("PhrasebookDan", new Locale("da")),
+    DUTCH     ("PhrasebookDut", new Locale("nl")),
+    ENGLISH   ("PhrasebookEng", Locale.ENGLISH),
+    FRENCH    ("PhrasebookFre", Locale.FRENCH),
+    GERMAN    ("PhrasebookGer", Locale.GERMAN),
+    ITALIAN   ("PhrasebookIta", Locale.ITALIAN),
+    NORWEGIAN ("PhrasebookNor", new Locale("no")),
+    POLISH    ("PhrasebookPol", new Locale("pl")),
+    ROMANIAN  ("PhrasebookRon", new Locale("ro")),
+    SPANISH   ("PhrasebookSpa", new Locale("es")),
+    SWEDISH   ("PhrasebookSwe", new Locale("sv"));
+
 
     String concrete;
     Locale locale;
@@ -61,45 +70,5 @@ public enum Language {
 	return this.getName();
     }
 
-    static public int getPGFResource(Language l1, Language l2) {
-        switch (l1) {
-        case GERMAN: switch (l2) {
-            case ENGLISH: return R.raw.phrasebook_de_en;
-            case SPANISH: return R.raw.phrasebook_de_es;
-            case FRENCH: return R.raw.phrasebook_de_fr;
-            case ITALIAN: return R.raw.phrasebook_de_it;
-            default: return -1;
-            }
-        case ENGLISH: switch (l2) {
-            case GERMAN: return R.raw.phrasebook_de_en;
-            case SPANISH: return R.raw.phrasebook_en_es;
-            case FRENCH: return R.raw.phrasebook_en_fr;
-            case ITALIAN: return R.raw.phrasebook_en_it;
-            default: return -1;
-            }
-        case SPANISH: switch (l2) {
-            case GERMAN: return R.raw.phrasebook_de_es;
-            case ENGLISH: return R.raw.phrasebook_en_es;
-            case FRENCH: return R.raw.phrasebook_es_fr;
-            case ITALIAN: return R.raw.phrasebook_es_it;
-            default: return -1;
-            }
-        case FRENCH: switch (l2) {
-            case GERMAN: return R.raw.phrasebook_de_fr;
-            case ENGLISH: return R.raw.phrasebook_en_fr;
-            case SPANISH: return R.raw.phrasebook_es_fr;
-            case ITALIAN: return R.raw.phrasebook_fr_it;
-            default: return -1;
-            }
-        case ITALIAN: switch (l2) {
-            case GERMAN: return R.raw.phrasebook_de_it;
-            case ENGLISH: return R.raw.phrasebook_en_it;
-            case SPANISH: return R.raw.phrasebook_es_it;
-            case FRENCH: return R.raw.phrasebook_fr_it;
-            default: return -1;
-            }
-        }
-        return -1;
-    }  
 }
 

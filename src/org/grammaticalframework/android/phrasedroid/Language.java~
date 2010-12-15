@@ -1,4 +1,4 @@
-package org.grammaticalframework.examples.phrasedroid;
+package org.grammaticalframework.android.phrasedroid;
 
 import java.util.Locale;
 

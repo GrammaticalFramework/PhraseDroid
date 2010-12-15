@@ -4,6 +4,7 @@ import org.grammaticalframework.PGF;
 import org.grammaticalframework.PGFBuilder;
 import org.grammaticalframework.Parser;
 import org.grammaticalframework.Linearizer;
+import org.grammaticalframework.UnknownLanguageException;
 import org.grammaticalframework.parser.ParseState;
 import org.grammaticalframework.Trees.Absyn.Tree;
 
@@ -55,10 +56,7 @@ class PGFThread extends Thread {
     }
     
     public void run() {
-	int phrasebook_resource =
-	    Language.getPGFResource(this.sLang, this.tLang);
-	if (phrasebook_resource == -1)
-	    throw new RuntimeException("PGF not found for languages " + sLang + " and " + tLang);
+	int phrasebook_resource = R.raw.phrasebook;
 	Looper.prepare();
 	mHandler = new PGFHandler(phrasebook_resource, sLang, tLang);
 	this.clear();
@@ -175,8 +173,10 @@ class PGFThread extends Thread {
                 activity.getResources().openRawResource(pgf_res);
             final long begin_time = System.currentTimeMillis();
             try {
-                this.mPGF = PGFBuilder.fromInputStream(is);
+                this.mPGF = PGFBuilder.fromInputStream(is, new String[] {source.concrete, target.concrete});
             } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (UnknownLanguageException e) {
                 throw new RuntimeException(e);
             }
             final long end_time = System.currentTimeMillis();
@@ -185,7 +185,7 @@ class PGFThread extends Thread {
             try {
                 this.mParser = new Parser(mPGF, sLang.concrete);
                 this.mLinearizer = new Linearizer(mPGF, tLang.concrete);
-            } catch (PGF.UnknownLanguageException e) {
+            } catch (UnknownLanguageException e) {
                 throw new RuntimeException(e);
             } catch (Exception e) {
                 throw new RuntimeException("Cannot create the linearizer : " + e);

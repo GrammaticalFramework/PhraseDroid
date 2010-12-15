@@ -1,4 +1,4 @@
-package org.grammaticalframework.examples.phrasedroid;
+package org.grammaticalframework.android.phrasedroid;
 
 import org.grammaticalframework.PGF;
 import org.grammaticalframework.PGFBuilder;
