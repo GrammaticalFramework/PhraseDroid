@@ -3,6 +3,9 @@
    <item android:id="@+id/menu_clear"
          android:icon="@drawable/ic_menu_clear"
          android:title="@string/menu_clear" />
+   <item android:id="@+id/menu_delete"
+         android:icon="@drawable/ic_input_delete"
+         android:title="@string/menu_delete" />
    <item android:id="@+id/menu_switch_languages"
          android:icon="@drawable/ic_menu_switch"
          android:title="@string/menu_switch_languages" />

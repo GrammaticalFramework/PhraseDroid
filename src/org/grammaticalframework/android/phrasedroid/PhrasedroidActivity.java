@@ -28,11 +28,6 @@ public class PhrasedroidActivity extends Activity
     private static final boolean DBG = true;
     private static final String TAG = "PhraseDroid";
 
-    // Preference Keys
-    public static final String PREFS_NAME = "PhrasedroidPrefs";
-    public static final String TLANG_PREF_KEY = "targetLanguageCode";
-    public static final String SLANG_PREF_KEY = "sourceLanguageCode";
-
     // TTS Intent code
     static final int MY_TTS_CHECK_CODE = 2347453;
 
@@ -55,11 +50,17 @@ public class PhrasedroidActivity extends Activity
     private MagnetController phraseMagnets;
     private MagnetController wordsMagnets;
     
+    // Preference Keys
+    public static final String PREFS_NAME = "PhrasedroidPrefs";
+    public static final String TLANG_PREF_KEY = "targetLanguageCode";
+    public static final String SLANG_PREF_KEY = "sourceLanguageCode";
+
     // Dialogs
     // TODO localization
     private ProgressDialog progress;
 
     String currentText = "";
+    private boolean magnets_ready = false;
 
     // UI elements
     TextView resultView;
@@ -84,7 +85,6 @@ public class PhrasedroidActivity extends Activity
                     }});
         // setup buttons
         ((Button) findViewById(R.id.speak_button)).setOnClickListener(this);
-        ((Button) findViewById(R.id.delete_button)).setOnClickListener(this);
         // Setup languages
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         // FIXME : do Source language
@@ -110,46 +110,60 @@ public class PhrasedroidActivity extends Activity
             mTts.shutdown();
     }
 
+    // ***************************** Actions ********************************
     public void addWord(String w) {
-        this.wordsMagnets.removeAllMagnets();
+	clearMagnets();
         this.phraseMagnets.addMagnet(w);
-        ((Button) findViewById(R.id.delete_button)).setEnabled(true);
         this.mPGFThread.scan(w);
     }
 
-    public void rmWord() {
-	// remove all clickable magnets
-        this.wordsMagnets.removeAllMagnets();
+    public boolean rmWord() {
+	if (!magnets_ready)
+	    return true;
 	// get the current words of the phrase
         String[] oldPhrase = this.phraseMagnets.getMagnets();
+	if (oldPhrase.length < 1)
+	    return false;
+	// remove all clickable magnets
+	clearMagnets();
 	// create a new phrase with all of them but the last one
 	String[] newPhrase = new String[oldPhrase.length - 1];
 	for (int i = 0 ; i < oldPhrase.length - 1;i++) {
             newPhrase[i] = oldPhrase[i];
 	}
         this.phraseMagnets.replaceMagnets(newPhrase);
-        ((Button) findViewById(R.id.delete_button)).setEnabled(false);
 	// parse this new phrase in one batch
         this.mPGFThread.parse(newPhrase);
+	return true;
     }
 
     public void clearPhrase() {
-        this.wordsMagnets.removeAllMagnets();
         this.phraseMagnets.removeAllMagnets();
-        ((Button) findViewById(R.id.delete_button)).setEnabled(false);
+	clearMagnets();
         this.mPGFThread.clear();
     }
     
+    // ***************************** Magnets *******************************
+    public void clearMagnets() {
+        this.wordsMagnets.removeAllMagnets();
+	this.magnets_ready = false;
+    }
+
+    public void setMagnets(final String[] magnets) {
+        Arrays.sort(magnets);
+        runOnUiThread(new Runnable() {public void run() {
+            wordsMagnets.replaceMagnets(magnets);
+        }});
+	this.magnets_ready = true;
+    }
+    
+    // ***************************** Callback *******************************
     public void new_parse_result(final String[] magnets, Translation t) {
-        this.setMagnets(magnets);
+	setMagnets(magnets);
         if (t != null)
             this.setText(t.text, true);
         else
             this.setText("", false);
-        if (this.phraseMagnets.size() > 0)
-            runOnUiThread(new Runnable() {public void run() {
-                ((Button) findViewById(R.id.delete_button)).setEnabled(true);
-            }});
     }
     
     public void pgf_ready() {
@@ -169,7 +183,7 @@ public class PhrasedroidActivity extends Activity
         mPGFThread.start();
 	this.configureTTS(tLang.locale);
         this.setText("", false);
-        this.wordsMagnets.removeAllMagnets();
+	clearMagnets();
         this.phraseMagnets.removeAllMagnets();
         // We write the names of the language in the titlebar
         this.setTitle(Html.fromHtml(getString(R.string.app_name) + " (" + sLang.getName()+" &#8594; "+tLang.getName() + ")"));
@@ -183,8 +197,7 @@ public class PhrasedroidActivity extends Activity
     public void onClick(View v) {
         if (v == findViewById(R.id.speak_button)) {
             say(currentText);
-        } else if (v == findViewById(R.id.delete_button))
-              rmWord();
+        }
     }
 
     public void setText(String t, boolean sayable) {
@@ -202,14 +215,16 @@ public class PhrasedroidActivity extends Activity
             });
     }
 
-    public void setMagnets(final String[] magnets) {
-        Arrays.sort(magnets);
-        runOnUiThread(new Runnable() {public void run() {
-            wordsMagnets.replaceMagnets(magnets);
-        }});
-    }
 
-    // *****************************  ACTIVITY MENU *****************************
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+	if (keyCode == KeyEvent.KEYCODE_BACK) {
+	    if (rmWord())
+		return true;
+	}
+	return super.onKeyDown(keyCode, event);
+    }
+    
+    // *****************************  ACTIVITY MENU ****************************
 
     /* Creates the menu items */
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -229,6 +244,9 @@ public class PhrasedroidActivity extends Activity
             return true;
 	case R.id.menu_change_languages:
             showDialog(DIALOG_LANGS_ID);
+            return true;
+	case R.id.menu_delete:
+	    rmWord();
             return true;
 	}
 	return false;

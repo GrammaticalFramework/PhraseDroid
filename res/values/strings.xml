@@ -5,7 +5,8 @@
     <!-- Menu -->
     <string name="menu_switch_languages">Switch Languages</string>
     <string name="menu_change_languages">Change Languages</string>
-    <string name="menu_clear">Clear</string>
+    <string name="menu_clear">Clear input</string>
+    <string name="menu_delete">Delete last word</string>
 
     <!-- Others -->
     <string name="source_concrete">PhrasebookEng</string>

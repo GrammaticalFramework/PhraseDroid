@@ -5,26 +5,13 @@
    android:layout_height="fill_parent"
    android:orientation="vertical"
    android:padding="10px">
-   <LinearLayout
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:gravity="right"
-      android:layout_weight="0">
-      <se.fnord.android.layout.PredicateLayout
-         android:id="@+id/phrase_magnets"
-         android:layout_weight="1"
-         android:layout_width="wrap_content" 
-         android:layout_height="wrap_content"
-         android:padding="5dip"/>
-      <Button
-         android:id="@+id/delete_button"
-         android:layout_height="wrap_content"
-         android:layout_weight="0"
-         android:layout_width="wrap_content"
-         android:drawableLeft="@drawable/ic_input_delete"
-         android:drawablePadding="0px" 
-         android:enabled="false" />
-   </LinearLayout>
+  <se.fnord.android.layout.PredicateLayout
+     android:id="@+id/phrase_magnets"
+     android:layout_weight="0"
+     android:layout_width="wrap_content" 
+     android:layout_height="wrap_content"
+     android:minHeight="14.5sp"
+     android:padding="5dip"/>
    <View
       android:layout_height="2px"
       android:layout_width="fill_parent"
