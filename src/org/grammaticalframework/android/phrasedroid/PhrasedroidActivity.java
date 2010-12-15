@@ -45,6 +45,7 @@ public class PhrasedroidActivity extends Activity
     static final int DIALOG_LANGS_ID = 1;
 
     private boolean tts_ready = false;
+    private boolean tts_available = false;
     private TextToSpeech mTts;
     private Language sLang = Language.ENGLISH;
     private Language tLang = Language.FRENCH;
@@ -166,8 +167,7 @@ public class PhrasedroidActivity extends Activity
         this.progress = ProgressDialog.show(this, "", "Loading Grammar. Please wait...", true);
         mPGFThread = new PGFThread(this, sLang, tLang);
         mPGFThread.start();
-        if (this.tts_ready)
-            mTts.setLanguage(this.tLang.locale);
+	this.configureTTS(tLang.locale);
         this.setText("", false);
         this.wordsMagnets.removeAllMagnets();
         this.phraseMagnets.removeAllMagnets();
@@ -189,7 +189,7 @@ public class PhrasedroidActivity extends Activity
 
     public void setText(String t, boolean sayable) {
         final String text = t;
-        final boolean enableTTS = sayable;
+        final boolean enableTTS = sayable && this.tts_available;
         if (sayable)
             this.currentText = text;
         else
@@ -238,7 +238,7 @@ public class PhrasedroidActivity extends Activity
         Dialog dialog;
         switch(id) {
           case DIALOG_LANGS_ID:
-            Context mContext = this; //getApplicationContext();
+            Context mContext = this;
 	    AlertDialog.Builder builder;
 	    AlertDialog alertDialog;
 
@@ -270,15 +270,13 @@ public class PhrasedroidActivity extends Activity
 			}
 		    });
 
-	    alertDialog = builder.create();
-            dialog = alertDialog;
+	    //alertDialog = builder.create();
+            dialog = builder.create(); //alertDialog;
             //dialog.setTitle("Languages");
             // Populatting
             final Language languages[] = Language.values();
 	    ArrayAdapter<Language> adapter = 
-                new ArrayAdapter<Language>( this,
-					   android.R.layout.simple_spinner_item,
-					   languages );
+                new ArrayAdapter<Language>(this, android.R.layout.simple_spinner_item, languages );
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             ts.setAdapter(adapter);
             ss.setAdapter(adapter);
@@ -326,7 +324,24 @@ public class PhrasedroidActivity extends Activity
     public void onInit(int status) {
         if (status == TextToSpeech.SUCCESS) {
             this.tts_ready = true;
-            mTts.setLanguage(this.tLang.locale);
+	    this.configureTTS(this.tLang.locale);
         }
+    }
+
+    /**
+     * This function should be used to set-up the language of the TTS engine.
+     * it takes care of checking that the TTS engine is ready and that the language 
+     * is supported.
+     *
+     * @param code local code
+     */
+    public void configureTTS(Locale code) {
+	if (this.tts_ready) {
+	    if (this.mTts.isLanguageAvailable(code) >= 0) {
+		mTts.setLanguage(code);
+		this.tts_available = true;
+	    } else
+		this.tts_available = false;
+	}
     }
 }
