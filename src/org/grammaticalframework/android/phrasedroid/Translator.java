@@ -4,6 +4,7 @@ import org.grammaticalframework.PGF;
 import org.grammaticalframework.Parser;
 import org.grammaticalframework.Linearizer;
 import org.grammaticalframework.Trees.Absyn.Tree;
+import org.grammaticalframework.UnknownLanguageException;
 
 import java.util.Vector;
 
@@ -25,7 +26,7 @@ class Translator {
 	  } catch (Exception e) {
 	      throw new RuntimeException("Cannot create the linearizer : " + e);
 	  }
-      } catch (PGF.UnknownLanguageException e) {
+      } catch (UnknownLanguageException e) {
 	  throw new RuntimeException("Cannot create the Parser : language not found " + sLang);
       }
    }
