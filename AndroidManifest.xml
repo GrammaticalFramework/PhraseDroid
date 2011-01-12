@@ -3,6 +3,9 @@
 	  package="org.grammaticalframework.android.phrasedroid"
 	  android:versionCode="3"
 	  android:versionName="1.0">
+  <uses-sdk android:minSdkVersion="5" 
+            android:targetSdkVersion="8"
+            android:maxSdkVersion="9" />
   <application android:label="@string/app_name" android:icon="@drawable/icon" 
 	       android:name="org.grammaticalframework.android.phrasedroid.PhrasedroidApp">
     <activity android:name="PhrasedroidActivity"
