@@ -8,6 +8,7 @@ public enum Language {
     DANISH    ("PhrasebookDan", new Locale("da")),
     DUTCH     ("PhrasebookDut", new Locale("nl")),
     ENGLISH   ("PhrasebookEng", Locale.ENGLISH),
+    FINNISH   ("PhrasebookFin", new Locale("fi")),
     FRENCH    ("PhrasebookFre", Locale.FRENCH),
     GERMAN    ("PhrasebookGer", Locale.GERMAN),
     ITALIAN   ("PhrasebookIta", Locale.ITALIAN),
