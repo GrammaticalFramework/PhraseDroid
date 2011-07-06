@@ -192,8 +192,5 @@ class PGFThread extends Thread {
             }
             activity.pgf_ready();
         }
-         
-        
-        
     }
 }

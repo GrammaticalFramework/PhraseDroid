@@ -41,7 +41,7 @@ public class PredicateLayout extends ViewGroup {
         public LayoutParams(int width, int height, int horizontal_spacing, int vertical_spacing) {
             super(width, height);
             this.horizontal_spacing = horizontal_spacing;
-            this.vertical_spacing = vertical_spacing;     
+            this.vertical_spacing = vertical_spacing;
         }
     }
 
@@ -61,6 +61,7 @@ public class PredicateLayout extends ViewGroup {
         int height = MeasureSpec.getSize(heightMeasureSpec) - getPaddingTop() - getPaddingBottom();
         final int count = getChildCount();
         int line_height = 0;
+	int lines = 1;
 
         int xpos = getPaddingLeft();
         int ypos = getPaddingTop();
@@ -79,6 +80,7 @@ public class PredicateLayout extends ViewGroup {
                 if (xpos + childw > width) {
                     xpos = getPaddingLeft();
                     ypos += line_height;
+		    lines += 1;
                 }
 
                 xpos += childw + lp.horizontal_spacing;
@@ -86,15 +88,17 @@ public class PredicateLayout extends ViewGroup {
         }
         this.line_height = line_height;
 
+	final int total_height = lines * line_height + getPaddingTop() + getPaddingBottom();
+
         if (MeasureSpec.getMode(heightMeasureSpec) == MeasureSpec.UNSPECIFIED){
-            height = ypos + line_height;
+            height = total_height;
 
         } else if (MeasureSpec.getMode(heightMeasureSpec) == MeasureSpec.AT_MOST){
-            if (ypos + line_height < height){
-                height = ypos + line_height;
+            if (total_height < height){
+                height = total_height;
             }
         }
-        setMeasuredDimension(width, height);
+        setMeasuredDimension(width + getPaddingLeft() + getPaddingRight(), height);
     }
 
     @Override

@@ -7,6 +7,7 @@ import android.view.MotionEvent;
 import android.graphics.*;
 import android.content.Context;
 import java.util.Vector;
+import org.grammaticalframework.android.phrasedroid.view.Magnet;
 
 class MagnetController implements View.OnTouchListener {
     private final PredicateLayout mLayout;
@@ -23,9 +24,9 @@ class MagnetController implements View.OnTouchListener {
 
     public void addMagnet(String word) {
 	this.mMagnets.add(word);
-	TextView t = new TextView(this.mContext);
+	TextView t = new Magnet(this.mContext);
 	t.setText(word);
-	applyMagnetStyles(t);
+        t.setClickable(true);
 	t.setOnTouchListener(this);
 	this.mLayout.addView(t, new PredicateLayout.LayoutParams(3, 3));
     }
@@ -47,14 +48,6 @@ class MagnetController implements View.OnTouchListener {
 
     public int size() {
         return this.mMagnets.size();
-    }
-
-    private void applyMagnetStyles(TextView view) {
-        view.setTextColor(Color.BLACK);
-        view.setBackgroundColor(Color.WHITE);
-        view.setSingleLine(true);
-        view.setPadding(10, 10, 10, 10);
-        view.setClickable(true);
     }
 
     //OnTouchListener

@@ -18,6 +18,7 @@ import java.util.Locale;
 import java.util.Arrays;
 import android.util.Log;
 
+import org.grammaticalframework.android.phrasedroid.view.*;
 
 public class PhrasedroidActivity extends Activity
     implements TextToSpeech.OnInitListener,
@@ -25,7 +26,7 @@ public class PhrasedroidActivity extends Activity
 {
     
     // Logging
-    private static final boolean DBG = true;
+    private static final boolean DBG = false;
     private static final String TAG = "PhraseDroid";
 
     // TTS Intent code
@@ -49,6 +50,7 @@ public class PhrasedroidActivity extends Activity
     // Magnets
     private MagnetController phraseMagnets;
     private MagnetController wordsMagnets;
+    private ComposeMagnet    magnets;
     
     // Preference Keys
     public static final String PREFS_NAME = "PhrasedroidPrefs";
@@ -72,6 +74,9 @@ public class PhrasedroidActivity extends Activity
         setContentView(R.layout.main);
         // Get pointers to the ui elements
         resultView = (TextView) findViewById(R.id.result_view);
+	magnets = (ComposeMagnet) findViewById(R.id.magnets);
+	magnets.setMagnets(new String[]{"I", "am", "cool", "here", "gone", "not", "tired"}, new String[] {"cool", "here", "gone", "not", "tired", "here", "gone", "not", "tired", "here", "gone", "not", "tired"});
+
         PredicateLayout p = (PredicateLayout) findViewById(R.id.phrase_magnets);
         this.phraseMagnets = 
             new MagnetController(p, new MagnetController.OnClickListener() {
@@ -251,6 +256,7 @@ public class PhrasedroidActivity extends Activity
 	}
 	return false;
     }
+
     
     protected Dialog onCreateDialog(int id) {
         Dialog dialog;
