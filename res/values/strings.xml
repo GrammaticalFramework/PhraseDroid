@@ -1,20 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- App -->
-    <string name="app_name">PhraseDroid</string>
+  <!-- Global -->
+  <string name="app_name">PhraseDroid</string>
+  
+  <!-- Home -->
+  <string name="change__user_language">Change</string>
+  <string name="show_information">About PhraseDroid</string>
+  <string name="user_language_is">Your language is %s</string>
+  <string name="user_language_changed_to">Your language is now %s</string>
 
-    <!-- Menu -->
-    <string name="menu_switch_languages">Switch Languages</string>
-    <string name="menu_change_languages">Change Languages</string>
-    <string name="menu_clear">Clear input</string>
-    <string name="menu_delete">Delete last word</string>
+  <!-- phrasebook -->
+  <string name="view_all__translations">View all</string>
+  <string name="grammar_loading">Loading Grammar. Please wait...</string>
+  <string name="cannot_find_language">Cannot find language.</string>
 
-    <!-- Others -->
-    <string name="source_concrete">PhrasebookEng</string>
-
-    <!-- Buttons & dialogs -->
-    <string name="input_delete">Delete</string>
-    <string name="please_choose_tlang">Target language : </string>
-    <string name="please_choose_slang">Source language : </string>
-    <string name="language_prompt">Choose Language</string>
+  <!-- result -->
+  <string name="translation__title">Translations</string>
+  <string name="say_it">Say it</string>
+  <string name="give_feedback">Feedback</string>
+  <string name="speech_not_available">Speech is not available for this language</string>
 
 </resources>

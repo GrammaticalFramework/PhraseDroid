@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="layout_PredicateLayout">
+    <attr name="layout_hspace" format="dimension" />
+    <attr name="layout_vspace" format="dimension" />
+  </declare-styleable>
+
+  <declare-styleable name="TranslationGallery">
+    <attr name="android:galleryItemBackground" />
+  </declare-styleable>
+</resources>
