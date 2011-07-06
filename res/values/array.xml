@@ -31,6 +31,7 @@
         <item>pl|PhrasebookPol</item>
         <item>ro|PhrasebookRon</item>
         <item>sv|PhrasebookSwe</item>
+        <item>ur|PhrasebookUrd</item>
     </string-array>
 
     <string-array name="language_icons">
@@ -48,6 +49,7 @@
         <item>@drawable/btn_flag_pl</item>
         <item>@drawable/btn_flag_ro</item>
         <item>@drawable/btn_flag_sv</item>
+        <item>@drawable/btn_flag_ur</item>
     </string-array>
 
 

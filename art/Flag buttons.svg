@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="150"
@@ -15,7 +16,7 @@
    version="1.1"
    inkscape:version="0.48.0 r9654"
    sodipodi:docname="Flag buttons.svg"
-   inkscape:export-filename="/home/gdetrez/Projects/PhraseDroid2.0/res/drawable-mdpi/ic_flag_pl_selected.png"
+   inkscape:export-filename="/home/gdetrez/Projects/PhraseDroid/res/drawable-mdpi/ic_flag_ur_pressed.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -88,20 +89,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.82105199"
-     inkscape:cx="-255.30922"
-     inkscape:cy="124.1636"
+     inkscape:zoom="2.3222857"
+     inkscape:cx="54.528027"
+     inkscape:cy="45.898127"
      inkscape:document-units="px"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="g15101"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1280"
-     inkscape:window-height="747"
+     inkscape:window-height="771"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="1024"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -134,7 +135,7 @@
      style="display:none"
      id="g12220"
      inkscape:groupmode="layer"
-     inkscape:label="Highlight"
+     inkscape:label="Highlight (focus)"
      transform="translate(-2854.375,511.59375)">
     <path
        style="fill:#ff6600;filter:url(#filter15097)"
@@ -144,7 +145,7 @@
   </g>
   <g
      transform="translate(-2854.375,511.59375)"
-     inkscape:label="Copie de Highlight"
+     inkscape:label="Highlight (pressed)"
      inkscape:groupmode="layer"
      id="g15101"
      style="display:inline">
@@ -192,7 +193,8 @@
      id="layer14"
      inkscape:label="Spanish (es)"
      style="display:none"
-     transform="translate(-2854.375,511.59375)">
+     transform="translate(-2854.375,511.59375)"
+     sodipodi:insensitive="true">
     <g
        id="g7877"
        transform="matrix(0.11110944,0,0,0.10001665,2840.0044,-382.29267)">
@@ -3343,6 +3345,107 @@
   </g>
   <g
      inkscape:groupmode="layer"
+     id="layer17"
+     inkscape:label="Urdu (ur)"
+     style="display:inline">
+    <rect
+       style="fill:#ffffff"
+       x="24.90926"
+       y="20"
+       width="100"
+       height="60"
+       id="rect3770" />
+    <rect
+       style="fill:#006600"
+       x="50.09074"
+       y="20"
+       width="75"
+       height="60"
+       id="rect3772" />
+    <g
+       id="g3864"
+       transform="translate(4.6086625,6.7727041)">
+      <circle
+         transform="matrix(0.75,0,0,0.75,81.43148,43.227299)"
+         id="circle3774"
+         r="24"
+         cx="0"
+         cy="0"
+         sodipodi:cx="0"
+         sodipodi:cy="0"
+         sodipodi:rx="24"
+         sodipodi:ry="24"
+         style="fill:#ffffff"
+         d="M 24,0 C 24,13.254834 13.254834,24 0,24 -13.254834,24 -24,13.254834 -24,0 c 0,-13.254834 10.745166,-24 24,-24 13.254834,0 24,10.745166 24,24 z" />
+      <circle
+         id="circle3776"
+         transform="matrix(0.56055733,-0.4982725,0.4982725,0.56055733,109.8873,58.071855)"
+         cy="-40"
+         cx="-7"
+         r="22"
+         sodipodi:cx="-7"
+         sodipodi:cy="-40"
+         sodipodi:rx="22"
+         sodipodi:ry="22"
+         style="fill:#006600"
+         d="m 15,-40 c 0,12.150264 -9.8497355,22 -22,22 -12.150264,0 -22,-9.849736 -22,-22 0,-12.150264 9.849736,-22 22,-22 12.1502645,0 22,9.849736 22,22 z" />
+      <g
+         transform="matrix(0.56055733,-0.4982725,0.4982725,0.56055733,90.400397,35.254939)"
+         id="cone"
+         style="fill:#ffffff">
+        <polygon
+           id="triangle"
+           points="-8,4 0,0 -8,0 "
+           transform="matrix(0.95105652,0.30901699,-0.30901699,0.95105652,8,0)" />
+        <use
+           height="1"
+           width="1"
+           y="0"
+           x="0"
+           xlink:href="#triangle"
+           transform="scale(1,-1)"
+           id="use3783" />
+      </g>
+      <use
+         height="1"
+         width="1"
+         y="0"
+         x="0"
+         xlink:href="#cone"
+         transform="matrix(0.30901699,0.95105652,-0.95105652,0.30901699,95.994578,-61.615323)"
+         id="use3785"
+         style="fill:#ffffff" />
+      <use
+         height="1"
+         width="1"
+         y="0"
+         x="0"
+         xlink:href="#cone"
+         transform="matrix(0.30901699,-0.95105652,0.95105652,0.30901699,28.935699,110.33645)"
+         id="use3787"
+         style="fill:#ffffff" />
+      <use
+         height="1"
+         width="1"
+         y="0"
+         x="0"
+         xlink:href="#cone"
+         transform="matrix(-0.80901699,0.58778525,-0.58778525,-0.80901699,184.25819,10.640764)"
+         id="use3789"
+         style="fill:#ffffff" />
+      <use
+         height="1"
+         width="1"
+         y="0"
+         x="0"
+         xlink:href="#cone"
+         transform="matrix(-0.80901699,-0.58778525,0.58778525,-0.80901699,142.81352,116.9128)"
+         id="use3791"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="Romanian (ro)"
      style="display:none"
@@ -3378,7 +3481,7 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="Polish (pl)"
-     style="display:inline"
+     style="display:none"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
