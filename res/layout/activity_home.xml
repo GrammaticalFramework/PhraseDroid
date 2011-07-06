@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:background="@drawable/background">
+  <LinearLayout style="@style/TitleBar">
+    <TextView  style="@style/TitleBarText"
+	       android:text="@string/app_name" />
+    <ImageView style="@style/TitleBarSeparator" />
+    <ImageButton
+       style="@style/TitleBarAction"
+       android:id="@+id/btn_title_info"
+       android:contentDescription="@string/show_information"
+       android:src="@drawable/button_info"
+       android:onClick="showInformation"
+       />
+  </LinearLayout>
+
+  <!-- The flags grid -->
+  <GridView
+     android:id="@+id/language_grid"
+     android:layout_width="fill_parent" 
+     android:layout_height="0dp"
+     android:columnWidth="150dp"
+     android:listSelector="#00000000"
+     android:descendantFocusability="afterDescendants"
+     android:numColumns="auto_fit"
+     android:verticalSpacing="10dp"
+     android:horizontalSpacing="10dp"
+     android:stretchMode="columnWidth"
+     android:gravity="center"
+     android:layout_weight="1"/>
+
+  <!-- A bar on the bottom -->
+  <View
+     android:layout_width="fill_parent"
+     android:layout_height="1dp"
+     android:background="@color/darkred"
+     android:layout_weight="0" />
+  <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="35dip"
+     android:background="@color/background4"
+     android:layout_weight="0">
+    <TextView
+       android:id="@+id/user_language_view"
+       android:layout_width="0dp"
+       android:layout_height="fill_parent"
+       android:layout_weight="1"
+       android:gravity="center_vertical"
+       android:paddingLeft="12dip"
+       android:paddingRight="12dip"
+       android:singleLine="true"
+       android:textSize="@dimen/text_size_small"
+       android:textStyle="bold"
+       />
+    <Button
+       android:layout_width="wrap_content"
+       android:layout_height="fill_parent"
+       android:layout_weight="0"
+       android:gravity="center_vertical"
+       android:paddingLeft="12dip"
+       android:paddingRight="12dip"
+       android:singleLine="true"
+       android:textSize="@dimen/text_size_small"
+       android:textStyle="bold"
+       android:onClick="changeUserLanguage"
+       android:background="@drawable/title_btn_bg"
+       android:textColor="@color/background4"
+       android:text="@string/change__user_language" />
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res/org.grammaticalframework.android.apps.phrasedroid"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical"
+   android:padding="0px">
+  <LinearLayout style="@style/TitleBar">
+    <TextView
+       android:id="@+id/source_language"
+       style="@style/TitleBarLanguageName"
+       />
+    <Button
+       android:id="@+id/btn_title_switch"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:contentDescription="Swich languages"
+       android:background="@drawable/ic_title_switch"
+       android:onClick="switchLanguages"/>
+    <TextView
+       android:id="@+id/target_language"
+       style="@style/TitleBarLanguageName"
+       android:layout_weight="1"
+       />
+    <ProgressBar
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:paddingRight="12dip"
+       android:id="@+id/progress"
+       android:visibility="invisible"
+       style="@android:style/Widget.ProgressBar.Small"
+       />
+  </LinearLayout>
+
+  <org.grammaticalframework.android.ui.view.ComposeMagnet
+     android:id="@+id/magnets"
+     android:layout_weight="0"
+     android:layout_width="fill_parent" 
+     android:layout_height="wrap_content"
+     android:layout_marginTop="0dip"
+     android:layout_marginBottom="0dip"
+     android:layout_marginLeft="0dip"
+     android:layout_marginRight="0dip"
+     android:background="@drawable/bg_input"
+     android:padding="5dip"
+     android:paddingTop="20dip"
+     />
+  <ScrollView
+     android:background="#000000"
+     android:layout_height="0px"
+     android:layout_weight="1"
+     android:layout_width="fill_parent">
+    <org.grammaticalframework.android.ui.layout.PredicateLayout
+       android:background="#000000"
+       android:id="@+id/words_magnets"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_hspace="1dip"
+       app:layout_vspace="1dip"
+       android:padding="5dip">
+    </org.grammaticalframework.android.ui.layout.PredicateLayout>
+  </ScrollView>
+  <ViewStub
+     android:id="@+id/stub_translation"
+     android:inflatedId="@+id/translation"
+     android:layout="@layout/translation_panel"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" />
+</LinearLayout>

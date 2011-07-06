@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50.809971"
+   height="50.791237"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   inkscape:export-filename="/home/gdetrez/Projects/PhraseDroid2.0/res/drawable-mdpi/ic_title_info_selected.png"
+   inkscape:export-xdpi="79.738167"
+   inkscape:export-ydpi="79.738167"
+   sodipodi:docname="dessin.svg">
+  <defs
+     id="defs4">
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3832-0">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.77001513"
+         id="feGaussianBlur3834-9" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="18.550361"
+     inkscape:cx="17.669256"
+     inkscape:cy="30.05946"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     inkscape:window-width="1280"
+     inkscape:window-height="747"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Selected"
+     style="display:inline"
+     transform="translate(5.4053438,5.396011)">
+    <text
+       xml:space="preserve"
+       style="font-size:38.36558151px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ff7f2a;fill-opacity:1;stroke:#ffffff;stroke-width:0.06281472;stroke-opacity:1;filter:url(#filter3832-0);font-family:Webdings;-inkscape-font-specification:Webdings Bold"
+       x="0.81684732"
+       y="31.473684"
+       id="text2985-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/gdetrez/Projects/PhraseDroid2.0/res/drawable-mdpi/ic_title_info_default.png"
+       inkscape:export-xdpi="101.25"
+       inkscape:export-ydpi="101.25"><tspan
+         sodipodi:role="line"
+         id="tspan2987-0"
+         x="0.81684732"
+         y="31.473684"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff7f2a;stroke:#ffffff;stroke-width:0.06281472;font-family:Webdings;-inkscape-font-specification:Webdings Bold">i</tspan></text>
+  </g>
+  <g
+     inkscape:label="i"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(651.47,-410.62993)"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-size:38.36558150999999839px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.06281472000000000;stroke-opacity:1;font-family:Webdings;-inkscape-font-specification:Webdings Bold"
+       x="-645.2478"
+       y="447.49963"
+       id="text2985"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/gdetrez/Projects/PhraseDroid2.0/res/drawable-mdpi/ic_title_info_alt.png"
+       inkscape:export-xdpi="79"
+       inkscape:export-ydpi="79"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="-645.2478"
+         y="447.49963"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.06281472000000000;font-family:Webdings;-inkscape-font-specification:Webdings Bold">i</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.89332581px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#cccccc;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-1119.5211"
+       y="264.63031"
+       id="text5308"
+       sodipodi:linespacing="125%"
+       transform="scale(0.59422753,1.6828571)"
+       inkscape:export-filename="/home/gdetrez/Projects/PhraseDroid2.0/res/drawable-mdpi/arrow.png"
+       inkscape:export-xdpi="101"
+       inkscape:export-ydpi="101"><tspan
+         sodipodi:role="line"
+         id="tspan5310"
+         x="-1119.5211"
+         y="264.63031">&gt;</tspan></text>
+  </g>
+</svg>

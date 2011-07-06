@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <!-- Used in View/Spinner1.java -->
+    <string-array name="languages">
+        <item>bg|PhrasebookBul</item>
+        <item>ca|PhrasebookCat</item>
+        <item>da|PhrasebookDan</item>
+        <item>de|PhrasebookGer</item>
+        <item>en|PhrasebookEng</item>
+        <item>es|PhrasebookSpa</item>
+        <item>fi|PhrasebookFin</item>
+        <item>fr|PhrasebookFre</item>
+        <item>it|PhrasebookIta</item>
+        <item>nl|PhrasebookDut</item>
+        <item>no|PhrasebookNor</item>
+        <item>pl|PhrasebookPol</item>
+        <item>ro|PhrasebookRon</item>
+        <item>sv|PhrasebookSwe</item>
+    </string-array>
+
+    <string-array name="language_icons">
+        <item>@drawable/btn_flag_bg</item>
+        <item>@drawable/btn_flag_ca</item>
+        <item>@drawable/btn_flag_da</item>
+        <item>@drawable/btn_flag_de</item>
+        <item>@drawable/btn_flag_en</item>
+        <item>@drawable/btn_flag_es</item>
+        <item>@drawable/btn_flag_fi</item>
+        <item>@drawable/btn_flag_fr</item>
+        <item>@drawable/btn_flag_it</item>
+        <item>@drawable/btn_flag_nl</item>
+        <item>@drawable/btn_flag_no</item>
+        <item>@drawable/btn_flag_pl</item>
+        <item>@drawable/btn_flag_ro</item>
+        <item>@drawable/btn_flag_sv</item>
+    </string-array>
+
+
+</resources>

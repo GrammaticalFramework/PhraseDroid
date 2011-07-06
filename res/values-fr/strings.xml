@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Global -->
+  <string name="app_name">PhraseDroid</string>
+  
+  <!-- Home -->
+  <string name="change__user_language">Changer</string>
+  <string name="show_information">À propos de PhraseDroid</string>
+  <string name="user_language_is">Votre langue : %s</string>
+  <string name="user_language_changed_to">Votre langue est maintenant : %s</string>
+
+  <!-- phrasebook -->
+  <string name="view_all__translations">Autres</string>
+  <string name="grammar_loading">Chargement de la grammaire. Merci de patienter...</string>
+  <string name="cannot_find_language">Language inconnu.</string>
+
+  <!-- result -->
+  <string name="translation__title">Traductions</string>
+  <string name="say_it">Exemple de Prononciation</string>
+  <string name="give_feedback">Commenter</string>
+  <string name="speech_not_available">Speech is not available for this language</string>
+
+</resources>
