@@ -1,0 +1,8 @@
+PHRASEDROID RELEASE NOTES		-*- mode:org -*-
+* 2.0
+Application mostly rewritten with a new user interface.
+Notable changes are:
+- the application now remember the user language
+- all possible translation are now displayed, along with the (english) disambiguation
+- application can be moved to the sd card
+- all controls are now on screen (no menu)
