@@ -90,7 +90,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.3222857"
-     inkscape:cx="54.528027"
+     inkscape:cx="-7.2645423"
      inkscape:cy="45.898127"
      inkscape:document-units="px"
      inkscape:current-layer="g15101"
@@ -100,9 +100,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1280"
-     inkscape:window-height="771"
+     inkscape:window-height="995"
      inkscape:window-x="0"
-     inkscape:window-y="1024"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -112,7 +112,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -120,7 +120,7 @@
      inkscape:label="Shadow"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline"
+     style="display:none"
      transform="translate(-2854.375,511.59375)"
      sodipodi:insensitive="true">
     <rect
@@ -148,7 +148,7 @@
      inkscape:label="Highlight (pressed)"
      inkscape:groupmode="layer"
      id="g15101"
-     style="display:inline">
+     style="display:none">
     <path
        inkscape:connector-curvature="0"
        id="path15103"
@@ -159,7 +159,7 @@
      inkscape:groupmode="layer"
      id="layer15"
      inkscape:label="Swedish (sv)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -192,9 +192,8 @@
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="Spanish (es)"
-     style="display:none"
-     transform="translate(-2854.375,511.59375)"
-     sodipodi:insensitive="true">
+     style="display:inline"
+     transform="translate(-2854.375,511.59375)">
     <g
        id="g7877"
        transform="matrix(0.11110944,0,0,0.10001665,2840.0044,-382.29267)">
@@ -219,7 +218,7 @@
      id="layer16"
      inkscape:label="Ecusson"
      transform="translate(-2854.375,511.59375)"
-     style="display:none">
+     style="display:inline">
     <g
        style="display:inline"
        id="g7881"
@@ -3448,7 +3447,7 @@
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="Romanian (ro)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3481,7 +3480,7 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="Polish (pl)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3507,7 +3506,7 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Norvegian (no)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3554,7 +3553,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Italian (it)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3587,7 +3586,7 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="German (de)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3620,7 +3619,7 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="French (fr)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3653,7 +3652,7 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="Finnish (fi)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3686,7 +3685,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="English (en)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        id="g7209"
@@ -3724,7 +3723,7 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Dutch (nl)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3757,7 +3756,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Danish (da)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3790,7 +3789,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Catalan (ca)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
@@ -3815,7 +3814,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Bulgarian (bg)"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2854.375,511.59375)">
     <g
        style="display:inline"
