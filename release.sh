@@ -5,7 +5,7 @@ set -u
 set -v
 
 TEMPAPK=`tempfile -s .apk`
-KEYSTORE="$HOME/android-release-key.keystore"
+KEYSTORE="./android-release-key.keystore"
 RELEASE="bin/PhraseDroid-release.apk"
 
 ## Delete old release
