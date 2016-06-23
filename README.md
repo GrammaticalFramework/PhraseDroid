@@ -19,7 +19,7 @@ PhraseDroid is available on [Google Play][2].
 License
 -------
 
-The project is licensed under the LGPL license.
+The project is licensed under the GNU LGPL-3.0+ license.
 
 [1]: https://play.google.com/store/apps/details?id=org.grammaticalframework.ui.android
 [2]: https://play.google.com/store/apps/details?id=org.grammaticalframework.android.apps.phrasedroid
