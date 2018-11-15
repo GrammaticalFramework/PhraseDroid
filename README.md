@@ -2,7 +2,8 @@ PhraseDroid
 ===========
 
 *You might want to look first at the more recent GF android app,
-[GF Offline Translator][1].*
+[GF Offline Translator][1]. This app will currently not work since
+it relies on a deprecated library.*
 
 
 PhraseDroid is an interactive phrasebook application. It is able to translate
